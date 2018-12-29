@@ -1,5 +1,5 @@
 
-# react-native-react-native-power-optimization-prompt
+# react-native-power-optimization-prompt
 
 This plugin should allow your React Native application to show a dialog to users prompting them to "exclude" your application from power optimization settings such as Huawei's "Protected Apps" system or OPPO's "Data Saving" system. By accepting the prompt the user is taken directly to the relevant settings screen where they can "exclude" their application.
 
@@ -28,14 +28,14 @@ It is not necessary to check for Platform.OS === 'android' as the module wrapper
 ## Getting started
 
 npm users:
-`$ npm install react-native-react-native-power-optimization-prompt`
+`$ npm install react-native-power-optimization-prompt`
 
 yarn users:
-`$ yarn add react-native-react-native-power-optimization-prompt`
+`$ yarn add react-native-power-optimization-prompt`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-react-native-power-optimization-prompt`
+`$ react-native link react-native-power-optimization-prompt`
 
 Using react native link should be enough most of the time. In case there is any trouble with this plugin after linking, please check the manual installation guide and make sure everything is in order.
 
