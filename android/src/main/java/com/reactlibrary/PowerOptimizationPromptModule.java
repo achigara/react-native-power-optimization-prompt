@@ -47,7 +47,7 @@ public class PowerOptimizationPromptModule extends ReactContextBaseJavaModule {
     };
 
     @ReactMethod
-    public void AlertIfCompatibleDevice(String title, String message, String dontShowAgainText, String positiveText, String negativeText) {
+    public void alertIfCompatibleDevice(String title, String message, String dontShowAgainText, String positiveText, String negativeText) {
 
         boolean noRelevantPackages = true;
         final String skipDialogPreference = "skipDialog";
