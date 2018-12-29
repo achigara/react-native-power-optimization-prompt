@@ -3,7 +3,18 @@
 
 This plugin should allow your React Native application to show a dialog to users prompting them to "exclude" your application from power optimization settings such as Huawei's "Protected Apps" system or OPPO's "Data Saving" system. By accepting the prompt the user is taken directly to the relevant settings screen where they can "exclude" their application.
 
-This only concerns Android.
+This only concerns a few Android phones from specific manufacturers.
+These are the currently supported manufacturers:
+- HUAWEI
+- OPPO
+- ASUS
+- XIAOMI
+- LETV
+- VIVO
+- SAMSUNG
+- HTC
+
+There is no guarantee that this plugin will work with all versions of all phones made by these manufacturers but it should cover quite a few.
 
 # Notes & limitations
 This plugin cannot detect if the user has already "excluded" your application. The prompt dialog will be shown under the following conditions:
