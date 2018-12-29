@@ -1,6 +1,10 @@
 
-import { NativeModules } from 'react-native';
+import { NativeModules, Platform } from 'react-native';
 
-const { RNReactNativePowerOptimizationPrompt } = NativeModules;
+const { PowerOptimizationPrompt } = NativeModules;
 
-export default RNReactNativePowerOptimizationPrompt;
+export default config => {
+    if (Platform.OS === 'android') {
+        PowerOptimizationPrompt.alertIfCompatibleDevice(config.title, config.text, config.doNotShowAgainText, config.positiveText, config.negativeText);
+    }
+  };
