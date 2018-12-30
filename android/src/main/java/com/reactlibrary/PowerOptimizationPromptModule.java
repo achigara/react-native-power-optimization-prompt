@@ -1,14 +1,14 @@
 
 package com.reactlibrary;
 
+import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.AppCompatCheckBox;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 
@@ -62,7 +62,7 @@ public class PowerOptimizationPromptModule extends ReactContextBaseJavaModule {
                     //This device is relevant and a dialog should be shown to the user
                     noRelevantPackages = false;
 
-                    final AppCompatCheckBox dontShowAgain = new AppCompatCheckBox(reactContext);
+                    final CheckBox dontShowAgain = new CheckBox(reactContext);
                     dontShowAgain.setText(dontShowAgainText);
                     dontShowAgain.setLeft(20);
                     dontShowAgain.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
