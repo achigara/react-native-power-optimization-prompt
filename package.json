@@ -1,6 +1,6 @@
 {
   "name": "react-native-power-optimization-prompt",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Show a dialog prompting the user to go to their phone's power optimization settings, depending on their device, where they can set exclude their phone from power optimization which usually stops the phone from receiving notifications when the screen is off.",
   "main": "index.js",
   "directories": {
