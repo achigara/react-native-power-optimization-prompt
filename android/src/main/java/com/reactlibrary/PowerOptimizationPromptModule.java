@@ -52,17 +52,17 @@ public class PowerOptimizationPromptModule extends ReactContextBaseJavaModule {
         boolean noRelevantPackages = true;
         final String skipDialogPreference = "skipDialog";
 
-        SharedPreferences settings = reactContext.getSharedPreferences("ProtectedApps", Context.MODE_PRIVATE);
+        SharedPreferences settings = getCurrentActivity().getSharedPreferences("ProtectedApps", Context.MODE_PRIVATE);
         boolean skipMessage = settings.getBoolean(skipDialogPreference, false);
 
         if (!skipMessage) {
             final SharedPreferences.Editor editor = settings.edit();
             for (final Intent intent : POWERMANAGER_INTENTS) {
-                if (reactContext.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
+                if (getCurrentActivity().getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
                     //This device is relevant and a dialog should be shown to the user
                     noRelevantPackages = false;
 
-                    final CheckBox dontShowAgain = new CheckBox(reactContext);
+                    final CheckBox dontShowAgain = new CheckBox(getCurrentActivity());
                     dontShowAgain.setText(dontShowAgainText);
                     dontShowAgain.setLeft(20);
                     dontShowAgain.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -73,12 +73,12 @@ public class PowerOptimizationPromptModule extends ReactContextBaseJavaModule {
                         }
                     });
 
-                    final RelativeLayout layout = new RelativeLayout(reactContext);
+                    final RelativeLayout layout = new RelativeLayout(getCurrentActivity());
                     layout.setPadding(50,50,0,0);
                     layout.addView(dontShowAgain);
 
 
-                    new AlertDialog.Builder(reactContext)
+                    new AlertDialog.Builder(getCurrentActivity())
                             .setIcon(android.R.drawable.ic_dialog_alert)
                             .setTitle(title)
                             .setMessage(message)
@@ -101,8 +101,8 @@ public class PowerOptimizationPromptModule extends ReactContextBaseJavaModule {
     }
 
     private void openPowerOptimizationActivity(Intent intent){
-        if (reactContext.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
-            reactContext.startActivity(intent);
+        if (getCurrentActivity().getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
+            getCurrentActivity().startActivity(intent);
         }
     }
 }
