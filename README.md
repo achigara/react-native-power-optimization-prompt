@@ -14,7 +14,7 @@ These are the currently supported manufacturers:
 - SAMSUNG
 - HTC
 
-There is no guarantee that this plugin will work with all versions of all phones made by these manufacturers but it should cover quite a few.
+There is no guarantee that this plugin will work with all versions of all phones made by these manufacturers.
 
 # Notes & limitations
 This plugin cannot detect if the user has already "excluded" your application. The prompt dialog will be shown under the following conditions:
