@@ -23,7 +23,7 @@ This plugin cannot detect if the user has already "excluded" your application. T
    AND
 2. "Do not show again" checkbox hasn't been checked yet
 
-It is not necessary to check for Platform.OS === 'android' as the module wrapper does this for you already
+It is not necessary to check for `Platform.OS === 'android'` as the module wrapper does this for you already
 
 ## Getting started
 
